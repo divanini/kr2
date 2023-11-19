@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contact.css">
+    <title>Контакты</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <svg style="width: 35px;" class="logo" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 18 21">
+                <path d="M14.537 10.625a4.421 4.421 0 0 0 2.684 4.047 10.96 10.96 0 0 1-1.384 2.845c-.834 1.218-1.7 2.432-3.062 2.457-1.339.025-1.769-.794-3.3-.794s-2.009.769-3.275.82c-1.316.049-2.317-1.318-3.158-2.532C1.323 14.984.01 10.451 1.772 7.391a4.9 4.9 0 0 1 4.139-2.507c1.292-.025 2.511.869 3.3.869.789 0 2.271-1.075 3.828-.917A4.67 4.67 0 0 1 16.7 6.82a4.524 4.524 0 0 0-2.161 3.805M12.02 3.193A4.4 4.4 0 0 0 13.06 0a4.482 4.482 0 0 0-2.946 1.516 4.185 4.185 0 0 0-1.061 3.093 3.708 3.708 0 0 0 2.967-1.416Z"/>
+            </svg>
+            <svg class="menu" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M3 12.5H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6.5H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18.5H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="nav__links">
+                <div class="nav__link"><a href="./about.html" style="text-decoration: none">О нас</a></div>
+                <div class="nav__link"><a href="./cars.html" style="text-decoration: none">Машины</a></div>
+                <div class="nav__link"><a href="./contact.html" style="text-decoration: none; color: white">Контакты</a></div>
+                <svg class="close" width="45" height="45" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"/><path d="M14 14L34 34" stroke="#333" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34L34 14" stroke="#333" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="c-text" style="font-size: 1.5rem; color: white; text-align: center; margin-top: 2.5rem;">Заполните форму</div>
+        <form id="carOrderForm">
+            <div class="first">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" value="Давид" required>
+              
+                <label for="email">Почта:</label>
+                <input type="email" id="email" name="email" value="chobanyan67@gmail.com" required>
+              
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" value="777" required>    
+            </div>
+            <div class="second">
+                <label>Пол:</label>
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Мужской</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Женский</label>    
+            </div>
+            <div class="third">
+                <label for="date">Дата обращения:</label>
+                <input type="date" id="date" name="date" required>
+              
+                <input type="hidden" name="secret" value="что-то">
+              
+            </div>
+            <div class="four">
+                <label for="car">Выберите машину:</label>
+                <select id="car" name="car" required>
+                  <option value="Mercedes AVTR">Mercedes AVTR</option>
+                  <option value="Bugatti Veyron">Bugatti Veyron</option>
+                  <option value="Lamborghini Huracan">Lamborghini Huracan</option>
+                  <option value="Ford GT">Ford GT</option>
+                  <option value="Aston Martin DB5">Aston Martin DB5</option>
+                  <option value="Mercedes-AMG G63">Mercedes-AMG G63</option>
+                  <option value="Audi E Tron GT">Audi E Tron GT</option>
+                </select>
+            </div>
+            <div class="btn">
+                <button class="sendTheForm" type="button" onclick="resetForm()">Очистить форму</button>
+                <button type="button" onclick="redirectToGoogle()">Отправить форму</button>
+            </div>
+          
+
+          </form>
+    </main>
+<script src="../js/contact.js"></script>
+</body>
+</html>

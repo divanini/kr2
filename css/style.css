@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "Medium";
+    src: url("../fonts/SFUIText-Medium.ttf");
+} 
+
+@font-face {
+    font-family: "Regular";
+    src: url("../fonts/SFUIText-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Semibold";
+    src: url("../fonts/SFUIText-Semibold.ttf");
+}
+
+@font-face {
+    font-family: "SemiboldI";
+    src: url("../fonts/SFUIText-SemiboldItalic.ttf");
+}
+
+* {
+    font-family: "Medium";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* html {background-color: white} */
+
+body {
+    background-color: rgb(175, 202, 226);
+    width: min(1540px, 100%);
+    margin-inline: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 40px;
+    padding-top: 40px;
+}
+
+.nav__links {
+    display: flex;
+    gap: 80px;
+}
+
+.menu, .close {
+    display: none;
+}
+
+.nav__link {
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav__link:hover {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a {
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: white;
+}
+
+.logo {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    fill: black;
+}
+
+@media (max-width: 800px) {
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .is-opened {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(175, 202, 226);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__link {
+        padding: 20px;
+    }
+
+    .close {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 2rem;
+        right: 2.1rem;
+    }
+}
+
+section img {
+    width: 100%;
+    margin-top: 1.4rem;
+}
+
+.top {
+    margin-top: 2rem;
+}
+
+.top__text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 0px 2px white;
+}
+
+.top__box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    gap: 20px;
+}
+
+.top__item {
+    border: 1px white solid;
+    padding: 20px;
+}
+
+.top__item img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.top__item-text-box {
+    margin-top: 1rem;
+}
+
+.name {
+    color: white;
+    font-weight: bold;
+}
+
+.speed {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: white;
+}
+
+.top button {
+    margin-top: 1rem;
+    display: block;
+    margin-inline: auto;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: rgba(128, 0, 255, 0.542);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.top button:hover {
+    background-color: rgba(128, 0, 255, 1);
+}
+
+.contact {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.contact-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 0px 2px white;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-img {
+    width: 800px;
+}
+
+.contact-box-main {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+}
+
+.contact-btn {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    background-color:rgb(196, 226, 255);
+    border: none;
+}
+
+@media (max-width:1220px) {
+    .contact-box {
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 880px) {
+    .contact-img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-img {
+        width: 80%;
+    }
+}
